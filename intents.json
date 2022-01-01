@@ -46,6 +46,12 @@
             "patterns": ["when are you guys open", "what are your hours", "hours of operation"],
             "responses": ["We are open 7am-4pm Monday-Friday!"],
             "context_set": ""
+        },
+        {
+            "tag": "salutation",
+            "patterns": ["bonjour", "salut", "hey"],
+            "responses": ["Bonjour!", "Salut!", "Hey!"],
+            "context_set": ""
         }
     ]
 }
