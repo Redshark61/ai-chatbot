@@ -10,6 +10,9 @@ import tensorflow as tf
 from nltk.stem.lancaster import LancasterStemmer
 import nltk
 import numpy as np
+import pyttsx3
+
+engine = pyttsx3.init()
 
 nltk.download('punkt')
 stemmer = LancasterStemmer()
@@ -119,7 +122,10 @@ def chat():
                 if tg['tag'] == tag:
                     responses = tg['responses']
 
-            print(random.choice(responses))
+            response = random.choice(responses)
+            print(response)
+            engine.say(response)
+            engine.runAndWait()
         else:
             print("I didn't understand that, try again!")
 
